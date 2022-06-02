@@ -1,0 +1,166 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* color */
+:root{
+    /* ### Main */
+
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    
+    /* ### Neutral */
+    
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --BlackTransparent: hsl(0deg 0% 0% / 10%);
+
+    /* ### Font size txt */
+
+    --Text-font-size: 16px;
+
+    /* ### Font familly */
+    --Font-familly: 'Kumbh Sans', sans-serif;
+}
+
+.header-navigation{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.header-navigation .header-container-left{
+    display: flex;
+    align-items: center;
+}
+.header-menu-svg{margin-top: 8px;}
+.header-navigation .header-container-left .header-menu-svg{ 
+    margin-right: 8px;
+}
+.header-website-title a span.title-website{
+    font-size: 32px;
+    font-family: var(--Font-familly);
+    font-weight: 700;
+    color: var(--Black);
+}
+.homepage-link{
+    text-decoration: none;
+}
+
+.header-navigation .header-container-right{
+    display: flex;
+    align-items: center;
+}
+div.header-profile-svg img{
+    height: 35px;
+    margin-left: 8px;
+}
+/* Menu desktop */
+.menu-for-desktop{
+    display: none;
+}
+/* cursor pointer */
+.header-cart-svg, .header-profile-svg .header-menu-svg {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 981px) {
+    .header-navigation{
+        padding: 0 15px;
+        border-bottom: 1px solid var(--BlackTransparent);
+        max-width: 85%;
+        height: 85px;
+    }
+    .header-website-title span.title-website{
+        font-size: 32px;
+        font-family: var(--Font-familly);
+        font-weight: 700;
+    }
+    .menu-for-desktop{
+        display: block;
+        width: 400px;
+        padding-top: 32px;
+        margin-left: 32px;
+    }
+    .menu-for-desktop ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menu-for-desktop li a{
+        font-size: var(--Text-font-size);
+        font-family: var(--Font-familly);
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--Black);
+    }
+    .menu-for-desktop li{
+        height: 50px;
+    }
+    .menu-for-desktop li:hover{
+        border-bottom: 2px solid var(--Orange);
+        transition: border-bottom ease-in;
+    }
+    .header-menu-svg{
+        display: none;
+    }
+    /* cart + profile  */
+
+    div.header-profile-svg img{
+        height: 45px;
+        margin-left: 32px;
+    }
+
+
+}
