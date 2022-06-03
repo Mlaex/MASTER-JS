@@ -68,16 +68,12 @@ table {
     /* ### Font familly */
     --Font-familly: 'Kumbh Sans', sans-serif;
 }
-/* keyframe */
-@keyframes menu-active-slide {
-    0% {
-        transform: translateX(-100vw);
-    }
-    100%{
-        transform: translateX(0vw);
-    }
-}
 
+/* translate menu */
+.menu-for-desktop.active-menu{
+    transform: translateX(0);
+    transition: transform .5s;
+}
 
 
 .header-navigation{
@@ -102,6 +98,7 @@ table {
     font-family: var(--Font-familly);
     font-weight: 700;
     color: var(--Black);
+    margin-left: 4px;
 }
 .homepage-link{
     text-decoration: none;
@@ -117,12 +114,12 @@ div.header-profile-svg img{
 }
 /* Menu desktop */
 .menu-for-desktop{
-    position: absolute;
+    position: fixed;
     top: 0px;
     background: white;
     height: 100vh;
     width: 50vw;
-    animation: menu-active-inactive 0.5s;
+    transform: translateX(-100%);
 }
 .icone-close-desktop{
     margin: 36px auto;
@@ -157,31 +154,29 @@ div.header-profile-svg img{
     }
     /* menu */
     .menu-for-desktop{
+        position: unset;
         width: 400px;
         padding-top: 32px;
+        background-color: transparent;
+        transform: translateX(0);
+        height: 50px;
+        margin-left: 32px;
     }
     .menu-for-desktop ul{
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
-    }
-    .menu-for-desktop li a{
-        font-size: var(--Text-font-size);
-        font-family: var(--Font-familly);
-        font-weight: 400;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--Black);
+        height: 50px;
+        width: 400px;
     }
     .menu-for-desktop li{
         height: 50px;
+        margin-bottom: 0px;
     }
     .menu-for-desktop li:hover{
         border-bottom: 2px solid var(--Orange);
         transition: border-bottom ease-in;
     }
-    .header-menu-svg{
+    .header-menu-svg,.icone-close-desktop{
         display: none;
     }
 
