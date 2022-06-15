@@ -248,13 +248,6 @@ div.header-profile-svg img{
 
 /* content page product */
 /* content left */
-/* .img-max-content{
-    background-image: url('../asset/jpg/image-product-1.jpg');
-    height: 300px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 .img-max-content img.img-main{
     height: 300px;
     width: 100%;
@@ -385,6 +378,16 @@ input.add-to-cart:hover{
     font-size: 24px;
     font-family: var(--Font-familly);
 }
+.eshop-cart-adding-decre{
+    position: absolute;
+    left: 15px;
+    margin-bottom: 8px;
+}
+.eshop-cart-adding-incre{
+    position: absolute;
+    right: 15px;
+    margin-bottom: 8px;
+}
 
 @media screen and (min-width: 426px) and (max-width: 980px){
     .cart-pop-up{
@@ -460,7 +463,11 @@ input.add-to-cart:hover{
         align-items: center;
         justify-content: center;
     }
-    .content-body-left, .content-body-right{
+    .content-body-left{
+        width: 40%;
+        margin-right: 5%
+    }
+    .content-body-right{
         width: 50%;
     }
     /* content left */
@@ -487,5 +494,54 @@ input.add-to-cart:hover{
         height: 80px;
         width: 80px;
         border-radius: 15px;
+    }
+    /* pricing cat */
+    .eshop-descr{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .eshop-price {
+        margin-right: 16px;
+    }
+    .eshop-price-with-discount{
+        margin-bottom: 8px;
+    }
+    .eshop-cart-selection {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .eshop-cart-adding, .eshop-cart-btn{
+        width: 45%;
+        height: 16px;
+        padding: 16px 0;
+    }
+    .eshop-cart-btn{
+        width: 60%;
+    }
+    .eshop-cart-adding{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /* product page */
+    .content-body-left{
+        width: 45%;
+        margin-right: 5%
+    }
+    .content-body-right{
+        width: 50%;
+    }
+    /* content left */
+    .img-max-content img{
+        height: 400px;
+        width: 400px;
+        border-radius: 15px;
+        background-position: top;
+    }
+    .slider-img-other img{
+        height: 115px;
+        width: 115px;
     }
 }
