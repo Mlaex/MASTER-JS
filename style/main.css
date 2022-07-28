@@ -487,7 +487,7 @@ input.add-to-cart:hover{
     .cart-pop-up{
         width: 500px;
         max-width: 50%;
-        top: 12vh;
+        top: 10vh;
         right: 7vw;
     }
 
@@ -586,5 +586,11 @@ input.add-to-cart:hover{
     .slider-img-other img{
         height: 115px;
         width: 115px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    div.main-content{
+        max-width: 70%;
     }
 }
